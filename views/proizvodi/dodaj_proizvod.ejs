@@ -1,0 +1,38 @@
+<%- include('../_layouts/boilerplate') %>
+
+<% if (message != '') { %>
+    <div class="alert alert-success text-center col-sm-12"><h4><%= message %></h4></div>
+<% } %>
+<div class="container opis-2 mt-2">
+    <div class="card">
+        <div class="card-header"><h4><%= title %></h4></div>
+        <div class="card-body">    
+            <form action="/meni/dodaj_proizvod" method="POST" encType="multipart/form-data">
+            <div class="form-group ">
+                <label for="naziv">Naziv:</label>
+                <input type="text" class="form-control shadow p-3 mb-5 bg-white rounded" id="naziv" name="naziv" placeholder="Naziv" required>
+            </div>
+            <div class="form-group">
+                <label for="sadrzaj">Sadrzaj:</label>
+                <input type="text" class="form-control shadow p-3 mb-5 bg-white rounded" id="sadrzaj" name="sadrzaj" placeholder="Sadrzaj" required>
+            </div>
+            <div class="form-group">
+                <label for="kategorija">Kategorija:</label>
+                <input type="text" class="form-control shadow p-3 mb-5 bg-white rounded" id="kategorija" name="kategorija" placeholder="Kategorija" required>
+            </div>
+            <div class="form-group">
+                <label for="cena">Cena:</label>
+                <input type="text" class="form-control shadow p-3 mb-5 bg-white rounded" id="cena" name="cena" placeholder="Cena" required>
+            </div>
+            <div class="form-group">
+                <label for="image">Slika:</label>
+                <input type="file" class="form-control-file" id="img" name="img" required>
+            </div>
+            
+            <input type="submit" class="btn btn-primary mt-5" value="Dodaj">
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include('../_layouts/boilerplatefooter') %>

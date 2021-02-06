@@ -1,0 +1,45 @@
+<div class="header-img-pocetna">
+  <%- include('../_layouts/boilerplate') %>
+  <!-- HEADER -->
+  <div class="header-opis1 text-center">
+    <% if (message != '') { %>
+      <div class="alert alert-success text-center col-sm-12"><h4><%= message %></h4></div>
+  <% } %>
+    <p>Dobrodosli</p>
+    <section>
+      <a href="/meni" class="btn btn-success btn-lg mt-5">Poruči klopu</a>
+    </section>
+  </div>
+</div>
+<div class="o-nama" id="o-nama">
+  <div class="o-nama-text">
+    <div class="container o-nama-opis text-center">
+      <p>D & M brza hrana je porodična firma, osnovana 22.06.2016. godine, koja se bavi proizvodnjom i prodajom pizza, sendviča…</p>
+      <span>Osnivači i tvorci  su Marko i Milos Denic, braća iz Prokuplja, koji su odlučili da znanje i iskustvo stečeno kako u Srbiji, tako i u inostranstvu, iz veoma poznatih restorana i hotela visoke kategorizacije, pretoči iz sopstvene ideje u realizaciju.</span>
+    </div>
+  </div>
+  <div class="o-nama-img" style="height: 20rem;"></div>
+  <div class="container text-center">
+    <div class="row pice-img">
+      <div class="col-md-12 mt-5 o-nama-opis">
+        <p>Najbolje iz ponude</p>
+      </div>
+      <div class="white-bg"></div>
+      <% proizvod.forEach(items => { %>
+        <div class="col-md-3 mt-5">
+          <div class="card" style="width: 15rem;">
+            <img src="/images/meni/fungi.png" width="50" height="150" class="card-img-top" alt="fungi">
+            <div class="card-body">
+              <h5 class="card-title txt-font"><%= items.naziv %></h5>
+              <p class="card-text"><%= items.sadrzaj %>.</p>
+              <input type="hidden" value="<%= items.id %>" name="id"/>
+              <a href="/poruci" class="btn btn-danger">Poruči</a>
+            </div>
+          </div>
+        </div>
+      <% }); %>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include('../_layouts/boilerplatefooter') %>

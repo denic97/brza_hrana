@@ -1,0 +1,40 @@
+<%- include('../_layouts/boilerplate') %>
+<% if (message != '') { %>
+    <div class="alert alert-success text-center"><h4><%= message %></h4></div>
+<% } %>
+    <div class="container opis-2 mt-5">
+        <div class="card">
+            <div class="card-header"><h4>Registruj se</h4></div>
+            <div class="card-body">
+                <form action="/auth/registracija" method="POST">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Ime:</label>
+                        <input type="text" class="form-control" id="ime" name="ime" placeholder="Ime" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="prezime" class="form-label">Prezime:</label>
+                        <input type="text" class="form-control" id="prezime" name="prezime" placeholder="Prezime" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="email@gmail.com" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="lozinka" class="form-label">Lozinka:</label>
+                        <input type="password" class="form-control" id="loinka" name="lozinka" placeholder="Lozinka" required>
+                    </div>
+                    <div class="mb-5">
+                        <label for="povoni_lozinku" class="form-label">Ponovi lozinka:</label>
+                        <input type="password" class="form-control" id="ponovi_lozinku" name="ponovi_lozinku" placeholder="Ponovi lozinku" required>
+                    </div>
+                    <div class="mb-5">
+                        <label for="code" class="form-label">Admin code:</label>
+                        <input type="password" class="form-control" id="code" name="code" placeholder="Admin code">
+                    </div>
+                    <input type="submit" class="btn btn-primary" value="Registruj se">
+                </form>
+            </div>
+        </div> 
+    </div>
+
+<%- include('../_layouts/boilerplatefooter') %>

@@ -1,0 +1,146 @@
+
+p,span,strong{
+    color: grey;
+}
+
+/* BUTTONS */
+.btn-primary{
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+    font-size: .9rem;
+}
+.dodaj {
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+}
+.dodaj p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size:xx-large;
+    color: rgb(68, 65, 65);
+    margin-top: 2rem;
+}
+
+/* Info BG */
+.info-bg{
+    background-color: #106EEA;
+    color: #fff;
+    padding: .4rem 0;
+}
+
+.info-bg span{
+    color: #fff;
+}
+
+/* NAVBAR */
+.navbar {
+    font-size: large;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+}
+
+.info-img {
+    max-width: 100%;
+    height: auto;
+}
+/* ! *********************************************************** */
+
+.card {
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.txt-font {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.text {
+    padding-top: 3rem;
+    font-weight: 700;
+    font-size: 2.7rem;
+}
+/* ? HEADER  */
+.header-opis1 p {
+    font-family: Papyrus;
+    font-weight: 800;
+    font-size: 7rem;
+    color: white;
+    padding-top: 6rem;
+}
+
+.header-img-pocetna {
+    background-image: url('/images/header-img2.jpg');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 40rem;
+}
+
+.header-img-meni {
+    background-image: url('/images/header-img.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* ? O NAMA */
+.o-nama-text {
+    margin-bottom: 5rem;
+}
+
+.o-nama-opis p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size:xx-large;
+    color: rgb(68, 65, 65);
+    margin-top: 7rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+.o-nama-opis span {
+    font-weight: 500;
+    font-size: medium;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+
+.o-nama-img {
+    background-image: url('/images/onama-1.jpg');
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+}
+
+.finis p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size:xx-large;
+    color: rgb(37, 36, 36);
+    margin-top: 3rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* ? OPIS */
+.opis-2 label{
+    font-weight: 700;
+}
+
+/* ? FOOTER */
+
+.footer {
+    background-color: rgba(131, 168, 29, 0.918);
+}
+
+.footer span, strong {
+    color: white;
+}

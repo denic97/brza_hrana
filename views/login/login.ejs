@@ -1,0 +1,25 @@
+<%- include('../_layouts/boilerplate') %>
+<% if (message != '') { %>
+    <div class="alert alert-danger text-center col-sm-12"><h4><%= message %></h4></div>
+<% } %>
+
+    <div class="container opis-2">
+        <div class="card">
+            <div class="card-header"><h3><%= title %></h3></div>
+            <div class="card-body">
+                <form action="/auth/login" method="POST">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="email@gmail.com" required>
+                    </div>
+                    <div class="mb-5">
+                        <label for="lozinka" class="form-label">Lozinka:</label>
+                        <input type="password" class="form-control" id="loinka" name="lozinka" placeholder="Lozinka" required>
+                    </div>
+                    <input type="submit" class="btn btn-primary" value="Login">
+                </form>
+            </div>
+        </div>
+    </div>
+
+<%- include('../_layouts/boilerplatefooter') %>

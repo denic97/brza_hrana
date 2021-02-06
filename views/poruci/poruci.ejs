@@ -1,0 +1,43 @@
+<%- include('../_layouts/boilerplate') %>
+<% if (message != '') { %>
+    <div class="alert alert-success text-center col-sm-12"><h4><%= message %></h4></div>
+<% } %>
+<div class="container opis-2 mt-2">
+    <div class="card">
+        <div class="card-header"><h3><%= title %>:</h3><span>Ukupna cena: <%= ukupnaCena %> </span></div>
+        <div class="card-body">
+            <form action="/poruci/poruci" method="POST">
+                <div class="form-group">
+                    <label for="ime">Ime:</label>
+                    <input type="text" class="form-control shadow p-3 mb-3 bg-white rounded" name="ime" placeholder="Ime" required style="height: 3rem;">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control shadow p-3 mb-3 bg-white rounded" name="email" placeholder="email@gmail.com" required style="height: 3rem;">
+                </div>
+                <div class="form-group">
+                    <label for="broj_tel">Broj telefona:</label>
+                    <input type="text" class="form-control shadow p-3 mb-3 bg-white rounded" name="broj_tel" placeholder="064-123-123" required style="height: 3rem;">
+                </div>
+                <div class="form-group">
+                    <label for="adresa">Adresa: </label>
+                    <input type="text" class="form-control shadow p-3 mb-5 bg-white rounded" name="adresa" placeholder="Petra Petrovica 6" required style="height: 3rem;">
+                </div>
+                <input type="hidden" value="<%= ukupnaCena %>" name="cena">
+                <!-- <div class="form-group">
+                    <label for="velicina">Velicina pice: </label>
+                    <select name="velicina" class="form-control shadow p-3 mb-5 bg-white rounded"style="height: 3.5rem;">
+                        <option value=""></option>
+                        <option value="350">25 cm</option>
+                        <option value="400">32 cm</option>
+                        <option value="700">42 cm</option>
+                    </select>
+                </div> -->
+                
+                <input type="submit" class="btn btn-primary" value="Poruci">
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include('../_layouts/boilerplatefooter') %>

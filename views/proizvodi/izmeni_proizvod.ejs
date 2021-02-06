@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title><%= title %></title>
+
+    <!-- Ubacivanje font Awesome -->
+    <script src="https://kit.fontawesome.com/970411b221.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+  </head>
+  <body>
+    
+    <!-- INFO BG -->
+    <div class="info-bg bg-warning" id="vrh">
+      <div class="container d-flex justify-content-between">
+          <div class="left">
+              <i class="far fa-envelope"></i> <span class="mr-3">brzahrana@gmail.com</span>
+              <i class="fas fa-phone"></i> <span>061123123</span>
+          </div>
+          <div class="right">
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-facebook-f"></i>
+              <i class="fab fa-instagram"></i>
+          </div>
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand txt-font ml-5" href="/"><b>Brza hrana</b></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end mr-5" id="navbarNavDropdown">
+        <ul class="navbar-nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Pocetna</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/meni">Meni</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/poruci">Poruci</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/auth/registracija">Registracija</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/auth/login"><i class="fas fa-user"></i> Log in</a>
+          </li>
+        </ul>
+        <form class="form-inline">
+          <a href="/" class="btn">
+              <i class="fas fa-sign-out-alt"></i>
+          </a>
+        </form>
+      </div>
+    </nav>
+    
+    <!-- PROIZVODI -->
+    <div class="container opis-2">
+      <div class="card">
+        <div class="card-header"><h4><%= title %></h4></div>
+        <div class="card-body">
+          <form action="" method="POST" encType="multipart/form-data">
+            <% proizvod.forEach(items => { %> 
+                <div class="form-group">
+                  <label for="">Naziv:</label>
+                  <input type="text" class="form-control shadow p-3 mb-5 bg-white rounded" id="naziv" name="naziv" value="<%= items.naziv %>" required style="height: 3rem;">
+                </div>
+                <div class="form-group">
+                  <label for="">Sadrzaj:</label>
+                  <input type="text" class="form-control shadow p-3 mb-5 bg-white rounded" id="sadrzaj" name="sadrzaj" value="<%= items.sadrzaj %>" required style="height: 3rem;">
+                </div>
+                <div class="form-group">
+                  <label for="">Kategorija:</label>
+                  <input type="text" class="form-control shadow p-3 mb-5 bg-white rounded" id="kategorija" name="kategorija" value="<%= items.kategorija %>" required style="height: 3rem;">
+                </div>
+                <div class="form-group">
+                  <label for="">Cena:</label>
+                  <input type="text" class="form-control shadow p-3 mb-5 bg-white rounded" id="cena" name="cena" value="<%= items.cena %>" required style="height: 3rem;">
+                </div>
+                <div class="form-group">
+                  <label for="image">Slika:</label>
+                  <input type="file" class="form-control-file" id="img" name="img" value="<%= items.slika %>"required>
+              </div>
+            <% }); %>
+            <input type="submit" name="dugme" class="btn btn-primary mt-5" value="Dodaj">
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- START FOOTER -->
+    <footer class="footer mt-5">
+        <div class="container">
+            <strong><a href="#"><i class="fab fa-facebook-square"></i></a></strong>
+            <strong><a href="#"><i class="fab fa-instagram-square"></i></a></strong>
+        </div>
+        <div class="text-center bg-warning">
+            <span class="text-muted">Brza Hrana | &#169; 2021 All rights reserved!</span>
+        </div>
+    </footer>
+    <!-- END OF FOOTER -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
+    </body>
+</html>
